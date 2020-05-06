@@ -10,3 +10,7 @@ This repository contains Python codes for industrial and system engineering appl
 * [numpy](https://numpy.org)
 * [pandas](https://pandas.pydata.org/)
 * [scikit-lean](https://scikit-learn.org/stable/)
+
+## Written Articles
+
+* [Probability Sampling](https://medium.com/@rsalaza4/probability-sampling-with-python-8c977ad78664)
