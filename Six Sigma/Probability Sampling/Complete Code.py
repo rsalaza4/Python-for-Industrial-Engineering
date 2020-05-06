@@ -1,3 +1,5 @@
+# PROBABILITY SAMPLING # 
+
 # Import required libraries
 import numpy as np
 import pandas as pd
@@ -21,7 +23,7 @@ real_mean = round(df['measure'].mean(),3)
 # View data frame
 df
 
-# Simple Random Sampling
+# SIMPLE RANDOM SAMPLING
 
 # Obtain simple random sample
 simple_random_sample = df.sample(n=4).sort_values(by='product_id')
@@ -32,7 +34,7 @@ simple_random_mean = round(simple_random_sample['measure'].mean(),3)
 # View sampled data frame
 simple_random_sample
 
-# Systematic Sampling
+# SYSTEMATIC SAMPLING
 
 # Define systematic sampling function
 def systematic_sampling(df, step):
@@ -50,7 +52,7 @@ systematic_mean = round(systematic_sample['measure'].mean(),3)
 # View sampled data frame
 systematic_sample
 
-# Cluster Sampling
+# CLUSTER SAMPLING
 
 def cluster_sampling(df, number_of_clusters):
     
@@ -81,7 +83,7 @@ cluster_mean = round(cluster_sample['measure'].mean(),3)
 # View sampled data frame
 cluster_sample
 
-# Stratified Random Sampling
+# STRATIFIED RANDOM SAMPLING
 
 # Create data dictionary
 data = {'product_id':np.arange(1, number_of_products+1).tolist(),
@@ -110,7 +112,7 @@ stratified_random_sample
 # Obtain the sample mean for each group
 stratified_random_sample.groupby('product_strata').mean().drop(['product_id'],axis=1)
 
-# Measure Mean Comparison per Sampling Method
+# MEAURE MEAN COMPARISON PER SAMPLING METHOD
 
 # Create a dictionary with the mean outcomes for each sampling method and the real mean
 outcomes = {'sample_mean':[simple_random_mean,systematic_mean,cluster_mean],
