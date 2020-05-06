@@ -1,11 +1,6 @@
 # Define systematic sampling function
 def systematic_sampling(df, step):
     
-    """
-    Sampling method in which every nth unit is selected.
-    
-    """
-    
     indexes = np.arange(0,len(df),step=step)
     systematic_sample = df.iloc[indexes]
     return systematic_sample
