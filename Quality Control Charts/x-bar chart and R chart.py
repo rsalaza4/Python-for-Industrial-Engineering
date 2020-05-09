@@ -43,7 +43,7 @@ axs[0].plot(x_bar, linestyle='-', marker='o', color='black')
 axs[0].axhline((statistics.mean(x_bar)+0.577*statistics.mean(r)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)-0.577*statistics.mean(r)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)), color='blue')
-axs[0].set_title("X-bar Chart")
+axs[0].set_title("x-bar Chart")
 axs[0].set(xlabel='Group', ylabel='Mean')
 
 # R chart
