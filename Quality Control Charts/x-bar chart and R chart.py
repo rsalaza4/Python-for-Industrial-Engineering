@@ -43,7 +43,7 @@ axs[0].plot(x_bar, linestyle='-', marker='o', color='black')
 axs[0].axhline((statistics.mean(x_bar)+0.577*statistics.mean(r)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)-0.577*statistics.mean(r)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)), color='blue')
-axs[0].set_title("x-bar Chart")
+axs[0].set_title('x-bar Chart')
 axs[0].set(xlabel='Group', ylabel='Mean')
 
 # R chart
@@ -52,7 +52,7 @@ axs[1].axhline((2.574*statistics.mean(r)), color='red', linestyle='dashed')
 axs[1].axhline((0*statistics.mean(r)), color='red', linestyle='dashed')
 axs[1].axhline((statistics.mean(r)), color='blue')
 axs[1].set_ylim(bottom=0)
-axs[1].set_title("R Chart")
+axs[1].set_title('R Chart')
 axs[1].set(xlabel='Group', ylabel='Range')
 
 # Validate points out of control limits for x-bar chart
