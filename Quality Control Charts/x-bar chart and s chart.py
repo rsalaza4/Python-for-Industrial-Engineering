@@ -1,4 +1,3 @@
-
 ### x-bar chart and R chart ###
 
 # Import required libraries
