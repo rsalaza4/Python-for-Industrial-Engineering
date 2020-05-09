@@ -35,7 +35,7 @@ for group in x:
     x_bar.append(group.mean())
     r.append(group.max() - group.min())
     
-# Plot x-bar and r charts
+# Plot x-bar and R charts
 fig, axs = plt.subplots(2,figsize=(15,15))
 
 # x-bar chart
@@ -66,7 +66,7 @@ for group in x_bar:
 if control == True:
     print("All points within control limits.")
     
-# Validate points out of control limits for r chart
+# Validate points out of control limits for R chart
 i = 0
 control = True
 for group in r:
