@@ -36,14 +36,14 @@ for group in x:
     s.append(np.std(group))
     
 # Plot x-bar and s charts
-fig, axs = plt.subplots(2,figsize=(15,15))
+fig, axs = plt.subplots(2, figsize=(15,15))
 
 # x-bar chart
 axs[0].plot(x_bar, linestyle='-', marker='o', color='black')
 axs[0].axhline((statistics.mean(x_bar)+0.927*statistics.mean(s)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)-0.927*statistics.mean(s)), color='red', linestyle='dashed')
 axs[0].axhline((statistics.mean(x_bar)), color='blue')
-axs[0].set_title("x-bar Chart")
+axs[0].set_title('x-bar Chart')
 axs[0].set(xlabel='Group', ylabel='Mean')
 
 # s chart
@@ -59,19 +59,19 @@ i = 0
 control = True
 for group in x_bar:
     if group > statistics.mean(x_bar)+0.927*statistics.mean(s) or group < statistics.mean(x_bar)-0.927*statistics.mean(s):
-        print("Group", i, "out of mean control limits!")
+        print('Group', i, 'out of mean control limits!')
         control = False
     i += 1
 if control == True:
-    print("All points within control limits.")
+    print('All points within control limits.')
     
 # Validate points out of control limits for s chart
 i = 0
 control = True
 for group in s:
     if group > 1.649*statistics.mean(s) or group < 0.321*statistics.mean(s):
-        print("Group", i, "out of standard deviation cotrol limits!")
+        print('Group', i, 'out of standard deviation cotrol limits!')
         control = False
     i += 1
 if control == True:
-    print("All points within control limits.")
+    print('All points within control limits.')
