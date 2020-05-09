@@ -25,8 +25,8 @@ p['p'] = p['defects']/p['group_size']
 # Plot p chart
 plt.figure(figsize=(15,7.5))
 plt.plot(p['p'], linestyle='-', marker='o', color='black')
-plt.step(x = range(0,len(p['p'])), y = statistics.mean(p['p'])+3*(np.sqrt((statistics.mean(p['p'])*(1-statistics.mean(p['p'])))/(p['group_size']))), color='red', linestyle='dashed')
-plt.step(x = range(0,len(p['p'])), y = statistics.mean(p['p'])-3*(np.sqrt((statistics.mean(p['p'])*(1-statistics.mean(p['p'])))/(p['group_size']))), color='red', linestyle='dashed')
+plt.step(x=range(0,len(p['p'])), y=statistics.mean(p['p'])+3*(np.sqrt((statistics.mean(p['p'])*(1-statistics.mean(p['p'])))/(p['group_size']))), color='red', linestyle='dashed')
+plt.step(x=range(0,len(p['p'])), y=statistics.mean(p['p'])-3*(np.sqrt((statistics.mean(p['p'])*(1-statistics.mean(p['p'])))/(p['group_size']))), color='red', linestyle='dashed')
 plt.axhline(statistics.mean(p['p']), color='blue')
 plt.ylim(bottom=0)
 plt.title('p Chart')
