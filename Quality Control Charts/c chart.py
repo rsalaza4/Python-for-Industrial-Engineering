@@ -22,21 +22,21 @@ c = pd.DataFrame(c)
 # Plot c chart
 plt.figure(figsize=(15,7.5))
 plt.plot(c['defects'], linestyle='-', marker='o', color='black')
-plt.axhline(statistics.mean(c['defects'])+3*np.sqrt(statistics.mean(c['defects'])),color='red',linestyle='dashed')
-plt.axhline(statistics.mean(c['defects'])-3*np.sqrt(statistics.mean(c['defects'])),color='red',linestyle='dashed')
-plt.axhline(statistics.mean(c['defects']), color = 'blue')
+plt.axhline(statistics.mean(c['defects'])+3*np.sqrt(statistics.mean(c['defects'])), color='red', linestyle='dashed')
+plt.axhline(statistics.mean(c['defects'])-3*np.sqrt(statistics.mean(c['defects'])), color='red', linestyle='dashed')
+plt.axhline(statistics.mean(c['defects']), color='blue')
 plt.ylim(bottom=0)
-plt.title("C Chart")
-plt.xlabel("Group")
-plt.ylabel("Defect Count")
+plt.title('c Chart')
+plt.xlabel('Group')
+plt.ylabel('Defect Count')
 
 # Validate points out of control limits
 i = 0
 control = True
 for group in c['defects']:
     if group > statistics.mean(c['defects'])+3*np.sqrt(statistics.mean(c['defects'])) or group < statistics.mean(c['defects'])-3*np.sqrt(statistics.mean(c['defects'])):
-        print("Group", i, "out of defects cotrol limits!")
+        print('Group', i, 'out of defects cotrol limits!')
         control = False
     i += 1
 if control == True:
-    print("All points within control limits.")
+    print('All points within control limits.')
