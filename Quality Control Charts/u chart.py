@@ -25,21 +25,21 @@ u['u'] = u['defects']/u['group_size']
 # Plot u chart
 plt.figure(figsize=(15,7.5))
 plt.plot(u['u'], linestyle='-', marker='o', color='black')
-plt.step(x = range(0, len(u['u'])), y = u['u'].mean()+3*np.sqrt(u['u'].mean()/u['group_size']),color='red',linestyle='dashed')
-plt.step(x = range(0, len(u['u'])), y = u['u'].mean()-3*np.sqrt(u['u'].mean()/u['group_size']),color='red',linestyle='dashed')
-plt.axhline(statistics.mean(u['u']), color = 'blue')
+plt.step(x=range(0, len(u['u'])), y=u['u'].mean()+3*np.sqrt(u['u'].mean()/u['group_size']), color='red', linestyle='dashed')
+plt.step(x=range(0, len(u['u'])), y=u['u'].mean()-3*np.sqrt(u['u'].mean()/u['group_size']), color='red', linestyle='dashed')
+plt.axhline(statistics.mean(u['u']), color='blue')
 plt.ylim(bottom=0)
-plt.title("u Chart")
-plt.xlabel("Group")
-plt.ylabel("Fraction Defective")
+plt.title('u Chart')
+plt.xlabel('Group')
+plt.ylabel('Fraction Defective')
 
 # Validate points out of control limits
 i = 0
 control = True
 for group in u['u']:
     if group > u['u'].mean()+3*np.sqrt(u['u'].mean()/u['group_size'][i]) or group < u['u'].mean()-3*np.sqrt(u['u'].mean()/u['group_size'][i]):
-        print("Group", i, "out of fraction defective cotrol limits!")
+        print('Group', i, 'out of fraction defective cotrol limits!')
         control = False
     i += 1
 if control == True:
-    print("All points within control limits.")
+    print('All points within control limits.')
