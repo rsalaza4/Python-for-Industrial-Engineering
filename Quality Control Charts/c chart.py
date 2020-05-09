@@ -12,7 +12,7 @@ np.random.seed(42)
 # Set matplotlib style
 plt.style.use('ggplot')
 
-# Create dummy 
+# Create dummy data
 c = {'defects':np.random.randint(0,5,10).tolist(),
     'group_size':np.repeat(10,10).tolist()}
 
