@@ -51,7 +51,7 @@ axs[1].plot(s, linestyle='-', marker='o', color='black')
 axs[1].axhline((1.649*statistics.mean(s)), color='red', linestyle='dashed')
 axs[1].axhline((0.321*statistics.mean(s)), color='red', linestyle='dashed')
 axs[1].axhline((statistics.mean(s)), color='blue')
-axs[1].set_title("S Chart")
+axs[1].set_title('s Chart')
 axs[1].set(xlabel='Group', ylabel='Range')
 
 # Validate points out of control limits for x-bar chart
