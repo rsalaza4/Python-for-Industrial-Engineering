@@ -9,9 +9,6 @@ import statistics
 # Set random seed
 np.random.seed(42)
 
-# Set matplotlib style
-plt.style.use('ggplot')
-
 # Create dummy data
 x = np.array([list(np.random.normal(loc=10, scale=2, size=5)),
         list(np.random.normal(loc=10, scale=2, size=5)),
