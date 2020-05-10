@@ -9,9 +9,6 @@ import statistics
 # Set random seed
 np.random.seed(42)
 
-# Set matplotlib style
-plt.style.use('ggplot')
-
 # Create dummy data
 u = {'defects':np.random.randint(1,5,10).tolist(),
     'group_size':np.random.randint(10,15,10).tolist()}
