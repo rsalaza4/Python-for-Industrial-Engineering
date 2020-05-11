@@ -1,4 +1,4 @@
-### u chart ###
+### u-chart ###
 
 # Import required libraries
 import numpy as np
@@ -19,7 +19,7 @@ u = pd.DataFrame(u)
 # Add 'u' column to data frame
 u['u'] = u['defects']/u['group_size']
 
-# Plot u chart
+# Plot u-chart
 plt.figure(figsize=(15,7.5))
 plt.plot(u['u'], linestyle='-', marker='o', color='black')
 plt.step(x=range(0, len(u['u'])), y=u['u'].mean()+3*np.sqrt(u['u'].mean()/u['group_size']), color='red', linestyle='dashed')
