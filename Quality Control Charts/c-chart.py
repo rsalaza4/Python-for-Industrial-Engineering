@@ -1,4 +1,4 @@
-### c chart ###
+### c-chart ###
 
 # Import required libraries
 import numpy as np
@@ -16,7 +16,7 @@ c = {'defects':np.random.randint(0,5,10).tolist(),
 # Convert data to data frame
 c = pd.DataFrame(c)
 
-# Plot c chart
+# Plot c-chart
 plt.figure(figsize=(15,7.5))
 plt.plot(c['defects'], linestyle='-', marker='o', color='black')
 plt.axhline(statistics.mean(c['defects'])+3*np.sqrt(statistics.mean(c['defects'])), color='red', linestyle='dashed')
