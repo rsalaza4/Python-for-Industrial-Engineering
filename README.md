@@ -12,7 +12,7 @@ This repository contains Python codes for industrial and system engineering appl
 * [scipy](https://www.scipy.org/)
 * [statistics](https://docs.python.org/3/library/statistics.html)
 * [matplotlib](https://matplotlib.org/3.2.1/index.html)
-* [scikit-lean](https://scikit-learn.org/stable/)
+* [scikit-learn](https://scikit-learn.org/stable/)
 
 ## Written Articles
 
