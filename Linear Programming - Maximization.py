@@ -24,7 +24,7 @@ b = np.array([16, 19, 8, 0, 0])
 # Note: when maximizing, change the signs of the c vector coefficient
 c = np.array([-5, -7])
 
-# Solve linear programming probelm
+# Solve linear programming problem
 res = linprog(c, A_ub=A, b_ub=b)
 
 # Print results
