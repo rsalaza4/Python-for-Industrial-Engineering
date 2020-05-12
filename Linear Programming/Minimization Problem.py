@@ -7,17 +7,17 @@
 # 1x1 + 1x2 + 1x3 >= 1000
 # 1x1 - 2x2 + 0x3 >= 0
 # 0x1 + 0x2 + 1x3 >= 340
-#  x1 ,  x2       >= 0
+#  x1 ,  x2 ,  x3 >= 0
 
 # Import required libraries
 import numpy as np
 from scipy.optimize import linprog
 
 # Set the inequality constraints matrix
-A = np.array([[-1, -1, -1], [-1, 2, 0], [0, 0, -1], [-1, 0, 0], [0, -1, 0]])
+A = np.array([[-1, -1, -1], [-1, 2, 0], [0, 0, -1], [-1, 0, 0], [0, -1, 0], [0, 0, -1]])
 
 # Set the inequality constraints vector
-b = np.array([-1000, 0, -340, 0, 0])
+b = np.array([-1000, 0, -340, 0, 0, 0])
 
 # Set the coefficients of the linear objective function vector
 c = np.array([10, 15, 25])
