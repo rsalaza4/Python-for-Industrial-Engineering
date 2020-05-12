@@ -2,7 +2,7 @@
 
 # Example:
 
-# max Z = 5x1 + 7x2
+# max z = 5x1 + 7x2
 # s.t.
 # 1x1 + 0x2 <= 16
 # 2x1 + 3x2 <= 19
