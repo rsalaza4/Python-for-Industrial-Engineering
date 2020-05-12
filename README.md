@@ -16,4 +16,5 @@ This repository contains Python codes for industrial and system engineering appl
 
 ## Written Articles
 
-* [Probability Sampling](https://medium.com/@rsalaza4/probability-sampling-with-python-8c977ad78664)
+* [Probability Sampling](https://towardsdatascience.com/probability-sampling-with-python-8c977ad78664)
+* [Quality Control Charts](https://towardsdatascience.com/quality-control-charts-guide-for-python-9bb1c859c051)
