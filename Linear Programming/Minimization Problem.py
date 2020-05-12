@@ -28,5 +28,5 @@ res = linprog(c, A_ub=A, b_ub=b)
 # Print results
 print('Optimal value:', round(res.fun, ndigits=2),
       '\nx values:', res.x,
-      '\nNumber of iterations performed::', res.nit,
+      '\nNumber of iterations performed:', res.nit,
       '\nStatus:', res.message)
