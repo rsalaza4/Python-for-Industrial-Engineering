@@ -7,7 +7,7 @@
 # 1x1 + 1x2 + 1x3 >= 1000
 # 1x1 - 2x2 + 0x3 >= 0
 # 0x1 + 0x2 + 1x3 >= 340
-#  y1 ,  y2       >= 0
+#  x1 ,  x2       >= 0
 
 # Import required libraries
 import numpy as np
