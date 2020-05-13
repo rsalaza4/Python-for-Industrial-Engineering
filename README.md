@@ -7,9 +7,9 @@ This repository contains Python codes for industrial and system engineering appl
 
 ## Libraries
 
-* [numpy](https://numpy.org)
+* [NumPy](https://numpy.org)
 * [pandas](https://pandas.pydata.org/)
-* [scipy](https://www.scipy.org/)
+* [SciPy](https://www.scipy.org/)
 * [statistics](https://docs.python.org/3/library/statistics.html)
 * [matplotlib](https://matplotlib.org/3.2.1/index.html)
 * [scikit-learn](https://scikit-learn.org/stable/)
