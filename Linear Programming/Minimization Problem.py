@@ -14,6 +14,7 @@ import numpy as np
 from scipy.optimize import linprog
 
 # Set the inequality constraints matrix
+# Note: the inequality constraints must be in the form of <=
 A = np.array([[-1, -1, -1], [-1, 2, 0], [0, 0, -1], [-1, 0, 0], [0, -1, 0], [0, 0, -1]])
 
 # Set the inequality constraints vector
