@@ -16,5 +16,6 @@ This repository contains Python codes for industrial and system engineering appl
 
 ## Written Articles
 
+* [Linear Programming](https://towardsdatascience.com/linear-programming-with-python-db7742b91cb)
 * [Probability Sampling](https://towardsdatascience.com/probability-sampling-with-python-8c977ad78664)
 * [Quality Control Charts](https://towardsdatascience.com/quality-control-charts-guide-for-python-9bb1c859c051)
