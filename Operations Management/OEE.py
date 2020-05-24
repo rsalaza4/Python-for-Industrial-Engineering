@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 plt.style.use('ggplot')
 
 # Define OEE function
-def oee(A,B,C,D,E,F):
+def oee(A, B, C, D, E, F):
     
     '''
     Overall Equipment Efficiency components:
