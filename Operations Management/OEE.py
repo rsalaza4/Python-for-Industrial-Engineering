@@ -97,7 +97,7 @@ def oee(A, B, C, D, E, F):
         plt.legend()
 
         # Print OEE components
-        return(print('Overall Equipment Efficiency: {}%'.format(Profits[-1])))
+        return(print('Overall Equipment Efficiency: {}%'.format(round(Profits[-1],2))))
     
     # Errors validation
     if B > A:
