@@ -104,7 +104,7 @@ def oee(A, B, C, D, E, F):
         print('Error. The run time cannot be greater than the total available time.')        
     if D > C:
         print('Error. The actual production cannot be greater than the production capacity.')       
-    if D != E:
+    if E != D:
         print('Error. The product output must be equal to actual production.')     
     if F > E:
         print('Error. The actual good products cannot be greater than the product output.')
