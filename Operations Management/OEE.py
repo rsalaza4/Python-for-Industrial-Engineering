@@ -1,4 +1,4 @@
-### OVERALL EQUIPMENT EFFICIENCY ###
+### OVERALL EQUIPMENT EFFECTIVENESS ###
 
 # Import required libraries
 import matplotlib.pyplot as plt
@@ -99,7 +99,7 @@ def oee(A, B, C, D, E, F):
         plt.legend()
 
         # Print OEE components
-        return(print('Overall Equipment Efficiency: {}%'.format(round(Profits[-1],2))))
+        return(print('Overall Equipment Effectiveness: {}%'.format(round(Profits[-1],2))))
     
     # Errors validation
     if B > A:
