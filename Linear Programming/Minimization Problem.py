@@ -1,4 +1,4 @@
-### Linear Programming - Minimization Problem ###
+### LINEAR PROGRAMMING - MINIMIZATION PROBLEM ###
 
 # Example:
 
