@@ -1,3 +1,5 @@
+### OVERALL EQUIPMENT EFFICIENCY ###
+
 # Import required libraries
 import matplotlib.pyplot as plt
 %matplotlib inline
