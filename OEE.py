@@ -17,6 +17,7 @@ def oee(A,B,C,D,E,F):
     D = Actual production
     E = Product output
     F = Actual good products
+    
     '''
     
     # Components validation
