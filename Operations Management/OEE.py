@@ -47,7 +47,7 @@ def oee(A, B, C, D, E, F):
         # % Speed losses
         Loss.append(Profits[2]-Profits[3])
         Loss.append(Profits[3]-Profits[4])
-        # Defective units
+        # % Defective units
         Loss.append(Profits[4]-Profits[5])
 
         # Define list of indexes
