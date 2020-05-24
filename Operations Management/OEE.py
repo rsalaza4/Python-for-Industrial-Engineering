@@ -78,7 +78,7 @@ def oee(A, B, C, D, E, F):
         # Hide y-axis labels
         plt.yticks([])
 
-        # Add OEE variables
+        # Add OEE components
         plt.text(0, 0, 'Total Available Time', horizontalalignment='left')
         plt.text(0, 1, 'Run Time', horizontalalignment='left')
         plt.text(Profits[1], 1, 'Time Losses', horizontalalignment='left')
