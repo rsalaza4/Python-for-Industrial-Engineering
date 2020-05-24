@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 %matplotlib inline
 
-# Define style sheet
+# Define ggplot style sheet
 plt.style.use('ggplot')
 
 # Define OEE function
