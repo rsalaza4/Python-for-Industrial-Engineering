@@ -11,12 +11,12 @@ def oee(A, B, C, D, E, F):
     '''
     Overall Equipment Efficiency components:
     
-    A = Total available time
-    B = Run time
-    C = Production capacity
-    D = Actual production
-    E = Product output
-    F = Actual good products
+    A : Total available time
+    B : Run time
+    C : Production capacity
+    D : Actual production
+    E : Product output
+    F : Actual good products
     
     '''
     
