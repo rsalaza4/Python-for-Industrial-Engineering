@@ -16,7 +16,7 @@ def cluster_sampling(df, number_of_clusters):
         return(cluster_sample)
     
     except:
-        print("The population cannot be divided into clusters if equal size!")
+        print("The population cannot be divided into clusters of equal size!")
         
 # Obtain a cluster sample and save it in a new variable
 cluster_sample = cluster_sampling(df,5)
