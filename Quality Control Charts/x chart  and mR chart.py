@@ -69,7 +69,7 @@ i = 0
 control = True
 for unit in data['mR']:
     if unit > statistics.mean(data['mR'][1:len(data['mR'])])+3*statistics.mean(data['mR'][1:len(data['mR'])])*0.8525 or unit < statistics.mean(data['mR'][1:len(data['mR'])])-3*statistics.mean(data['mR'][1:len(data['mR'])])*0.8525:
-        print('Unit', i, 'out of cotrol limits!')
+        print('Unit', i, 'out of control limits!')
         control = False
     i += 1
 if control == True:
