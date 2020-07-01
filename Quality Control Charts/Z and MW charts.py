@@ -33,7 +33,6 @@ MW = [np.nan]
 
 # Obtain and append moving ranges
 i = 1
-
 for data in range(1, len(df)):
     MW.append(abs(df['Z'][i] - df['Z'][i-1]))
     i += 1
