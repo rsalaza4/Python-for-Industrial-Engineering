@@ -56,3 +56,25 @@ axs[1].axhline(3.27, color='red', linestyle='dashed')
 axs[1].axhline(0, color='red', linestyle='dashed')
 axs[1].set_title('MW Chart')
 axs[1].set(xlabel='Sample', ylabel='W')
+
+# Validate points out of control limits on Z chart
+i = 0
+control = True
+for Z in df['Z']:
+    if Z > 2.66 or Z < -2.66:
+        print('Sample', i, 'out of cotrol limits!')
+        control = False
+    i += 1
+if control == True:
+    print('All Z points within control limits.')
+    
+# Validate points out of control limits on MW chart
+i = 0
+control = True
+for MW in df['MW']:
+    if MW > 3.27 or MW < 0:
+        print('Sample', i, 'out of cotrol limits!')
+        control = False
+    i += 1    
+if control == True:
+    print('All MW points within control limits.')
