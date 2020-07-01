@@ -83,7 +83,7 @@ axs[0].axhline(0, color='blue')
 axs[0].axhline(1.023, color='red', linestyle='dashed')
 axs[0].axhline(-1.023, color='red', linestyle='dashed')
 axs[0].set_title('Z-bar Chart')
-axs[0].set(xlabel='Sample', ylabel='z')
+axs[0].set(xlabel='Sample', ylabel='Z')
 axs[0].xaxis.set_major_locator(MaxNLocator(integer=True))
 axs[0].yaxis.set_major_locator(MaxNLocator(integer=False))
 
