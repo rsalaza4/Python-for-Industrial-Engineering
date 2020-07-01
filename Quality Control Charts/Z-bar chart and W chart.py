@@ -69,7 +69,7 @@ target_range_part_1 = pd.Series((np.repeat(1.693*((USL_part_1-LSL_part_1))/(6*Cp
 target_range_part_2 = pd.Series((np.repeat(1.693*((USL_part_2-LSL_part_2))/(6*Cp_2),6)))
 df['target_Rbar'] = pd.concat([target_range_part_1, target_range_part_2], ignore_index=True)
 
-# Obtain the z value
+# Obtain the Z value
 df['Z'] = ((df['X-bar']-df['target_Xbar2'])/df['target_Rbar'])
 
 # Obtain the W value
