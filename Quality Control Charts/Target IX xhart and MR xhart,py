@@ -60,3 +60,27 @@ axs[1].axhline(df['MR'].mean()*0, color='red', linestyle='dashed')
 axs[1].set_title('MR Chart')
 axs[1].set(xlabel='Sample', ylabel='Value')
 axs[1].yaxis.set_major_locator(MaxNLocator(integer=False))
+
+# Validate points out of control limits on Target IX chart
+i = 0
+control = True
+for deviation in df['deviation']:
+    if deviation > df['deviation'].mean()+(2.66*df['MR'].mean()) or deviation < df['deviation'].mean()-(2.66*df['MR'].mean()):
+        print('Sample', i, 'out of cotrol limits!')
+        control = False
+    i += 1
+    
+if control == True:
+    print('All points within control limits.')
+    
+# Validate points out of control limits on MR chart
+i = 0
+control = True
+for MR in df['MR']:
+    if MR > df['MR'].mean()*3.267 or MR < df['MR'].mean()*0:
+        print('Sample', i, 'range out of cotrol limits!')
+        control = False
+    i += 1
+    
+if control == True:
+    print('All points within control limits.')
