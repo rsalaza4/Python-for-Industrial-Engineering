@@ -69,7 +69,6 @@ for deviation in df['deviation']:
         print('Sample', i, 'out of cotrol limits!')
         control = False
     i += 1
-    
 if control == True:
     print('All Target IX points within control limits.')
     
@@ -81,6 +80,5 @@ for MR in df['MR']:
         print('Sample', i, 'range out of cotrol limits!')
         control = False
     i += 1
-    
 if control == True:
     print('All MR points within control limits.')
