@@ -71,7 +71,7 @@ for deviation in df['deviation']:
     i += 1
     
 if control == True:
-    print('All points within control limits.')
+    print('All Target IX points within control limits.')
     
 # Validate points out of control limits on MR chart
 i = 0
@@ -83,4 +83,4 @@ for MR in df['MR']:
     i += 1
     
 if control == True:
-    print('All points within control limits.')
+    print('All MR points within control limits.')
