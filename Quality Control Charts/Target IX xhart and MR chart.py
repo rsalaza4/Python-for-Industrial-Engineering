@@ -58,7 +58,7 @@ axs[1].axhline(df['MR'].mean(), color='blue')
 axs[1].axhline(df['MR'].mean()*3.267, color='red', linestyle='dashed')
 axs[1].axhline(df['MR'].mean()*0, color='red', linestyle='dashed')
 axs[1].set_title('MR Chart')
-axs[1].set(xlabel='Sample', ylabel='Value')
+axs[1].set(xlabel='Sample', ylabel='Moving Range')
 axs[1].yaxis.set_major_locator(MaxNLocator(integer=False))
 
 # Validate points out of control limits on Target IX chart
