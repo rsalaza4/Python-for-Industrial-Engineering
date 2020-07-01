@@ -93,3 +93,25 @@ axs[1].axhline(2.574, color='red', linestyle='dashed')
 axs[1].axhline(0, color='red', linestyle='dashed')
 axs[1].set_title('W Chart')
 axs[1].set(xlabel='Sample', ylabel='W')
+
+# Validate points out of control limits on Z-bar chart
+i = 0
+control = True
+for Z in df['Z']:
+    if Z > 1.023 or Z < -1.023:
+        print('Sample', i, 'out of cotrol limits!')
+        control = False
+    i += 1    
+if control == True:
+    print('All Z-bar points within control limits.')
+    
+# Validate points out of control limits on W chart
+i = 0
+control = True
+for W in df['W']:
+    if W > 2.574 or W < 0:
+        print('Sample', i, 'out of cotrol limits!')
+        control = False
+    i += 1    
+if control == True:
+    print('All W points within control limits.')
