@@ -1,4 +1,4 @@
-### Zbar chart and W chart ###
+### Z-bar chart and W chart ###
 
 # Import required libraries
 import numpy as np
@@ -82,7 +82,7 @@ axs[0].plot(df['Z'], linestyle='-', marker='o', color='black')
 axs[0].axhline(0, color='blue')
 axs[0].axhline(1.023, color='red', linestyle='dashed')
 axs[0].axhline(-1.023, color='red', linestyle='dashed')
-axs[0].set_title('Zbar Chart')
+axs[0].set_title('Z-bar Chart')
 axs[0].set(xlabel='Sample', ylabel='z')
 axs[0].xaxis.set_major_locator(MaxNLocator(integer=True))
 axs[0].yaxis.set_major_locator(MaxNLocator(integer=False))
