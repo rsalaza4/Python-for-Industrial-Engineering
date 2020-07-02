@@ -1,4 +1,4 @@
-### Z chart and MW chart ###
+### dpmo chart ###
 
 # Import required libraries
 import numpy as np
