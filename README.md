@@ -20,4 +20,4 @@ This repository contains Python codes for industrial and system engineering appl
 * [Probability Sampling](https://towardsdatascience.com/probability-sampling-with-python-8c977ad78664)
 * [Quality Control Charts](https://towardsdatascience.com/quality-control-charts-guide-for-python-9bb1c859c051)
 * [Short-Runs Control Charts](https://towardsdatascience.com/short-runs-control-charts-variables-data-with-python-7feb220e6957)
-* [DPMO Control Chart](https://medium.com/@rsalaza4/dpmo-chart-with-python-f495308905cc)
+* [DPMO Control Chart](https://towardsdatascience.com/dpmo-chart-with-python-f495308905cc)
