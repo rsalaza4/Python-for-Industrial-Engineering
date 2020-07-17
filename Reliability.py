@@ -18,7 +18,7 @@ size = 1000
 x = scipy.arange(size)
 
 # Generate the data
-y = scipy.stats.beta.rvs(6, 2, size=size, random_state=40)*50 # real data form unknown distribution would be here
+y = scipy.stats.beta.rvs(6, 2, size=size, random_state=40)*50 # real data from unknown distribution would be here
 
 # Build histogram
 plt.figure(figsize=(20,10))
