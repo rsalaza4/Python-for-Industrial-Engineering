@@ -24,14 +24,14 @@ y = scipy.stats.beta.rvs(6, 2, size=size, random_state=40)*50 # real data from u
 plt.figure(figsize=(20,10))
 h = plt.hist(y, bins=range(51))
 
-# List the disributions to be fitted
+# List the distributions to be fitted
 dist_names = ['alpha', 'beta', 'expon', 'gamma', 'norm', 'rayleigh']
 
-# Fit the distributions to the data and plot their probability density function
+# Fit the distributions to the data and plot their probability density functions
 for dist_name in dist_names:
     dist = getattr(scipy.stats, dist_name)
     param = dist.fit(y)
-    pdf_fitted = dist.pdf(x, *param[:-2], loc=param[-2], scale=param[-1]) * size
+    pdf_fitted = dist.pdf(x, *param[:-2], loc=param[-2], scale=param[-1])*size
     plt.plot(pdf_fitted, label=dist_name)
     plt.xlim(0,50)
 plt.legend(loc='upper left')
@@ -48,7 +48,7 @@ dist = getattr(scipy.stats, 'beta')
 # Fit the distribution to the data
 param = dist.fit(y)
 
-# Distribution parameters (e.g. a, b)
+# Distribution parameters (e.g. 'a', 'b' for beta distribution)
 args = param[:-2]
 
 # Location parameter
