@@ -8,7 +8,7 @@ import scipy.stats
 import warnings
 warnings.filterwarnings("ignore")
 
-# Step 1: Identify the distribution that best fits the data
+# Step 1: Obtain failure times
 
 # For the following example, 1000 random points will be generated from a known distribution (i.e. beta distribution)
 # However, most likely the distribution following the data will be unknown
@@ -19,6 +19,8 @@ x = scipy.arange(size)
 
 # Generate the data
 y = scipy.stats.beta.rvs(6, 2, size=size, random_state=40)*50 # real data from unknown distribution would be here
+
+# Step 1: Identify the distribution that best fits the data
 
 # Build histogram
 plt.figure(figsize=(20,10))
@@ -40,7 +42,7 @@ plt.xlabel("Failure Time")
 plt.ylabel("Frequency")
 plt.show()
 
-# Step 2: Obtain the distribution parameters
+# Step 3: Obtain the distribution parameters
 
 # Define the distribution with the best fit
 dist = getattr(scipy.stats, 'beta')
@@ -57,7 +59,7 @@ loc = param[-2]
 # Scale parameter
 scale = param[-1]
 
-# Step 3: Obtain probabilities
+# Step 4: Obtain probabilities
 
 # Probability of failure before time t
 print("Probability of failure before time 40:", round(scipy.stats.beta.cdf(40, *args, loc=loc, scale=scale)*100,2),"%")
