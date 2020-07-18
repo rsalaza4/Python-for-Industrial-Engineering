@@ -1,4 +1,4 @@
-### RELIABILITY
+### RELIABILITY ###
 
 # Import required libraries
 import matplotlib.pyplot as plt
