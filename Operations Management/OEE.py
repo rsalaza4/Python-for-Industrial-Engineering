@@ -11,7 +11,7 @@ plt.style.use('ggplot')
 def oee(A, B, C, D, E, F):
     
     '''
-    Overall Equipment Efficiency components:
+    Overall Equipment Effectiveness components:
     
     A : Total available time
     B : Run time
@@ -41,7 +41,6 @@ def oee(A, B, C, D, E, F):
         Profits.append(F/E*Profits[4])
 
         # Define a list for losses percentages
-        
         Loss=[0]
         # % Time losses
         Loss.append(Profits[0]-Profits[1])
