@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 
-# Define EQO function
+# Define EOQ function
 def EOQ(S, D, H):
     
     """
@@ -21,6 +21,7 @@ def EOQ(S, D, H):
     
     """
     
+    # Validate that all function arguments are non-negatives
     if(S>0 and D>0 and H>0):
         
         Q = (np.sqrt(2*S*D/H))
@@ -32,8 +33,7 @@ def EOQ(S, D, H):
 
         return [Q, number_of_orders, time_between_cycles, AOC, AHC, ATC]
     
-    else:
-        
+    else:    
         print("Error. All function arguments must be non-negative.")
     
 # Run example    
