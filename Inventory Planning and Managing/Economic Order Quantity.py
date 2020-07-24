@@ -21,7 +21,7 @@ def EOQ(S, D, H):
     
     """
     
-    # Validate that all function arguments are non-negatives
+    # Validate that all function arguments are non-negative
     if(S>0 and D>0 and H>0):
         
         Q = (np.sqrt(2*S*D/H))
