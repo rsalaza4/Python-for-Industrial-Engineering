@@ -23,3 +23,4 @@ This repository contains Python codes for industrial and system engineering appl
 * [DPMO Control Chart](https://towardsdatascience.com/dpmo-chart-with-python-f495308905cc)
 * [Reliability Analysis](https://towardsdatascience.com/reliability-analysis-with-python-862c95e5c65a)
 * [Economic Order Quantity](https://medium.com/swlh/economic-order-quantity-with-python-7129b471c68e)
+* [Economic Production Quantity](https://medium.com/swlh/economic-production-quantity-with-python-2840a6eb50ea)
