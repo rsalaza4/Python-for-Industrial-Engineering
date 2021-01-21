@@ -32,7 +32,7 @@ from reliability.Distributions import Lognormal_Distribution
 from reliability.Distributions import Weibull_Distribution
 
 # Import data
-Path = "Serial_Components.csv"
+Path = "failure_times.csv"
 df = pd.read_csv(Path)
 df.head()
 
