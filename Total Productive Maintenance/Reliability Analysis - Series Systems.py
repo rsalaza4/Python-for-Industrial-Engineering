@@ -1,4 +1,4 @@
-### RELIABILITY ANALYSIS - SERIAL COMPONENTS ###
+### RELIABILITY ANALYSIS - SERIES SYSTEMS ###
 
 # Import required libraries
 import path
