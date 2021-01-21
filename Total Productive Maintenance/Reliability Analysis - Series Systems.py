@@ -4,24 +4,8 @@
 import path
 import numpy as np
 import pandas as pd
-
 import reliability
-
 from reliability.Fitters import Fit_Everything
-from reliability.Fitters import Fit_Beta_2P
-from reliability.Fitters import Fit_Exponential_1P
-from reliability.Fitters import Fit_Exponential_2P
-from reliability.Fitters import Fit_Gamma_2P
-from reliability.Fitters import Fit_Gamma_3P
-from reliability.Fitters import Fit_Gumbel_2P
-from reliability.Fitters import Fit_Loglogistic_2P
-from reliability.Fitters import Fit_Loglogistic_3P
-from reliability.Fitters import Fit_Lognormal_2P
-from reliability.Fitters import Fit_Lognormal_3P
-from reliability.Fitters import Fit_Normal_2P
-from reliability.Fitters import Fit_Weibull_2P
-from reliability.Fitters import Fit_Weibull_3P
-
 from reliability.Distributions import Beta_Distribution
 from reliability.Distributions import Exponential_Distribution
 from reliability.Distributions import Gamma_Distribution
