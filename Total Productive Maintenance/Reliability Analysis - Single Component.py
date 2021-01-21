@@ -1,4 +1,4 @@
-### RELIABILITY ###
+### RELIABILITY ANALYSIS - SINGLE COMPONENT ###
 
 # Import required libraries
 import matplotlib.pyplot as plt
