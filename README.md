@@ -13,6 +13,7 @@ This repository contains Python codes for industrial and system engineering appl
 * [statistics](https://docs.python.org/3/library/statistics.html)
 * [matplotlib](https://matplotlib.org/3.2.1/index.html)
 * [scikit-learn](https://scikit-learn.org/stable/)
+* [reliability](https://reliability.readthedocs.io/en/latest/index.html#)
 
 ---
 
