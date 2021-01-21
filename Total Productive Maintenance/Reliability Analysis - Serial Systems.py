@@ -6,14 +6,6 @@ import numpy as np
 import pandas as pd
 import reliability
 from reliability.Fitters import Fit_Everything
-from reliability.Distributions import Beta_Distribution
-from reliability.Distributions import Exponential_Distribution
-from reliability.Distributions import Gamma_Distribution
-from reliability.Distributions import Gumbel_Distribution
-from reliability.Distributions import Normal_Distribution 
-from reliability.Distributions import Loglogistic_Distribution
-from reliability.Distributions import Lognormal_Distribution
-from reliability.Distributions import Weibull_Distribution
 
 # Load data
 Path = "failure_times.csv"
@@ -57,46 +49,8 @@ for i in range(len(df.columns)):
         output = Fit_Everything(failures=df.iloc[:,i].dropna().tolist(), show_probability_plot=False, show_PP_plot=False)
         
         # Define the probability distribution that best fitted the failure times for the given component
-        if output.best_distribution_name == 'Beta_2P':
-            dist = Beta_Distribution(alpha=output.Beta_2P_alpha, beta=output.Beta_2P_beta)
-            dist.plot()
-    
-        elif output.best_distribution_name == 'Gumbel_2P':
-            dist = Gumbel_Distribution(mu=output.Gumbel_2P_mu, sigma=output.Gumbel_2P_sigma)
-            dist.plot()
-
-        elif output.best_distribution_name == 'Weibull_2P':
-            dist = Weibull_Distribution(alpha=output.Weibull_2P_alpha, beta=output.Weibull_2P_beta)
-            dist.plot()
-
-        elif output.best_distribution_name == 'Normal_2P':
-            dist = Normal_Distribution(mu=output.Normal_2P_mu, sigma=output.Normal_2P_sigma)
-            dist.plot()
-            
-        elif output.best_distribution_name == 'Gamma_2P':
-            dist = Gamma_Distribution(alpha=output.Gamma_2P_alpha, beta=output.Gamma_2P_beta)
-            dist.plot()
-
-        elif output.best_distribution_name == 'Gamma_3P':
-            dist = Gamma_Distribution(alpha=output.Gamma_3P_alpha, beta=output.Gamma_3P_beta, gamma=output.Gamma_3P_gamma)
-            dist.plot()
-            
-        elif output.best_distribution_name == 'Loglogistic_3P':
-            dist = Loglogistic_Distribution(alpha=output.Loglogistic_3P_alpha, beta=output.Loglogistic_3P_beta, gamma=output.Loglogistic_3P_gamma)
-            dist.plot()
-            
-        elif output.best_distribution_name == 'Lognormal_3P':
-            dist = Lognormal_Distribution(mu=output.Lognormal_3P_mu, sigma=output.Lognormal_3P_sigma, gamma=output.Lognormal_3P_gamma)
-            dist.plot()
-            
-        elif output.best_distribution_name == 'Lognormal_2P':
-            dist = Lognormal_Distribution(mu=output.Lognormal_2P_mu, sigma=output.Lognormal_2P_sigma)
-            dist.plot()
-            
-        elif output.best_distribution_name == 'Exponential_2P':
-            dist = Exponential_Distribution(Lambda=output.Exponential_2P_gamma, gamma=output.Exponential_2P_gamma)
-            dist.plot()
-        
+        output.best_distribution.plot()
+           
         # Define the desired time of failre 't'
         t = float(input("Type in the desired time before failure: "))
         
@@ -116,7 +70,7 @@ for i in range(len(df.columns)):
         times.append(t)
                 
         # Get component reliability
-        component_reliability = dist.SF(t)
+        component_reliability = output.best_distribution.SF(t)
         
         # Append component reliability in reliabilities list
         reliabilities.append(component_reliability)
