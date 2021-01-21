@@ -15,7 +15,7 @@ from reliability.Distributions import Loglogistic_Distribution
 from reliability.Distributions import Lognormal_Distribution
 from reliability.Distributions import Weibull_Distribution
 
-# Import data
+# Load data
 Path = "failure_times.csv"
 df = pd.read_csv(Path)
 df.head()
