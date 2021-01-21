@@ -53,23 +53,23 @@ times = []
 for i in range(len(df.columns)):
      
     # Data Validation
-    # Validate that there are no negative failure times!
+    # Validate that there are no negative failure times
     error = False
     for data_point in df.iloc[:,i]:
         if data_point < 0:
             error = True
     
-    # Print error message if error == True
+    # Print error message if at least one negative failure time is present for the given component
     if error == True:
-        print(f"Error: {df.columns[i]} has at least one negative failure time. The analysis cannot move forward.")
+        print(f"Error: {df.columns[i]} has at least one negative failure time. Negative values are not accepted. The analysis cannot move forward.")
     
-    # If there are no negative failure times for the given components, perform reliability analysis
+    # Perform reliability analysis
     if error == False:
         
         # Print component being analyzed
         print(f"Reliability analysis {df.columns[i]}:\n")
         
-        # Fit all probability distributions from 'reliability' library
+        # Fit all probability distributions available from 'reliability' library
         output = Fit_Everything(failures=df.iloc[:,i].dropna().tolist(), show_probability_plot=False, show_PP_plot=False)
         
         # Define the probability distribution that best fitted the failure times for the given component
@@ -116,11 +116,13 @@ for i in range(len(df.columns)):
         # Define the desired time of failre 't'
         t = float(input("Type in the desired time before failure: "))
         
-        # Time 't' validation for negative values
+        # Time 't' validation
+        # Validate that no negative time was inserted
         while t<0 :
             print("Error: negative value insterted. Please insert a positive value greater than 0:")
             t = float(input("Type in the desired time before failure: "))
 
+        # If the best fitted distribution was Beta with 2 parameters, the time 't' cannot be greater than 1
         if output.best_distribution_name == 'Beta_2P':
             while t>1:
                 print("Error: for Beta distributions the range of the values must be within 0 and 1.")
@@ -128,14 +130,14 @@ for i in range(len(df.columns)):
         
         # Append failure time in times list
         times.append(t)
-            
-        print("\n--------------------------------------------------------------------------------------------------------------------\n")
                 
         # Get component reliability
         component_reliability = dist.SF(t)
         
         # Append component reliability in reliabilities list
         reliabilities.append(component_reliability)
+     
+        print("\n--------------------------------------------------------------------------------------------------------------------\n")
 
 # Calculate the system reliability
 system_reliability = np.prod(reliabilities)
