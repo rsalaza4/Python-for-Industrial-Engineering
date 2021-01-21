@@ -51,7 +51,7 @@ for i in range(len(df.columns)):
         # Define the probability distribution that best fitted the failure times for the given component
         output.best_distribution.plot()
            
-        # Define the desired time of failre 't'
+        # Define the desired time of failure 't'
         t = float(input("Type in the desired time before failure: "))
         
         # Time 't' validation
