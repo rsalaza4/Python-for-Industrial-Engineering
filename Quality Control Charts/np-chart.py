@@ -21,7 +21,7 @@ data['np'] = data['defects']/data['group_size']
 
 # Plot np-chart
 plt.figure(figsize=(15,7.5))
-plt.plot(p['p'], linestyle='-', marker='o', color='black')
+plt.plot(data['np'], linestyle='-', marker='o', color='black')
 plt.axhline(statistics.mean(data['np'])+3*(np.sqrt((statistics.mean(data['np'])*(1-statistics.mean(data['np'])))/statistics.mean(data['group_size']))), color='red', linestyle='dashed')
 plt.axhline(statistics.mean(data['np'])-3*(np.sqrt((statistics.mean(data['np'])*(1-statistics.mean(data['np'])))/statistics.mean(data['group_size']))), color='red', linestyle='dashed')
 plt.axhline(statistics.mean(data['np']), color='blue')
