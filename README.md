@@ -12,6 +12,7 @@ This repository contains Python codes for industrial and system engineering appl
 * [SciPy](https://www.scipy.org/)
 * [statistics](https://docs.python.org/3/library/statistics.html)
 * [matplotlib](https://matplotlib.org/3.2.1/index.html)
+* [seaborn](https://seaborn.pydata.org/)
 * [scikit-learn](https://scikit-learn.org/stable/)
 * [reliability](https://reliability.readthedocs.io/en/latest/index.html#)
 * [hvplot](https://hvplot.holoviz.org/)
